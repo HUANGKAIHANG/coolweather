@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:anroid="http://schemas.android.com/apk/res/android"
+    anroid:layout_width="match_parent"
+    anroid:layout_height="match_parent"
+    anroid:background="@color/colorPrimary">
+
+    <ImageView
+        anroid:id="@+id/bing_pic_img"
+        anroid:layout_width="match_parent"
+        anroid:layout_height="match_parent"
+        anroid:scaleType="centerCrop" />
+
+    <ScrollView
+        anroid:id="@+id/weather_layout"
+        anroid:layout_width="match_parent"
+        anroid:layout_height="match_parent"
+        anroid:scrollbars="none"
+        anroid:overScrollMode="never">
+
+        <LinearLayout
+            anroid:orientation="vertical"
+            anroid:layout_width="match_parent"
+            anroid:layout_height="wrap_content"
+            anroid:fitsSystemWindows="true">
+
+            <include layout="@layout/title"/>
+
+            <include layout="@layout/now"/>
+
+            <include layout="@layout/forecast"/>
+
+            <include layout="@layout/aqi"/>
+
+            <include layout="@layout/suggestion"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
